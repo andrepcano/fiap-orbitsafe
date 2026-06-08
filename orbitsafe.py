@@ -8,6 +8,7 @@ from funcoes import (
     consultar_historico,
     gerar_relatorio
 )
+from calculo_funcoes import analisar_funcoes, gerar_graficos
 
 # ============================================================
 #   ORBITSAFE — Programa Principal
@@ -26,7 +27,9 @@ def menu():
         print("  [2] Calcular IRO de uma região")
         print("  [3] Consultar histórico de alertas")
         print("  [4] Gerar relatório de risco")
-        print("  [5] Sair")
+        print("  [5] Análise matemática do IRO")
+        print("  [6] Gerar gráficos")
+        print("  [7] Sair")
         linha()
 
         opcao = input("  Escolha uma opção: ").strip()
@@ -43,6 +46,10 @@ def menu():
             case "4":
                 gerar_relatorio(regioes)
             case "5":
+                analisar_funcoes()
+            case "6":
+                gerar_graficos()
+            case "7":
                 limpar()
                 print("\n  Encerrando o OrbitSafe. Até logo! 🛰️\n")
                 break
